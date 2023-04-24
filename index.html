@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <!-- google font  -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- style sheet  -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="booking" class="section">
+      <div class="section-center">
+        <div class="container">
+          <div class="row">
+            <div class="booking-form">
+              <div class="form-header">
+                <h1>Detailing Registration</h1>
+              </div>
+              <form onsubmit="return handlesubmit()">
+                <div
+                  id="message"
+                  class="alert alert-danger"
+                  style="display: none"
+                >
+                  There is an error!!
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <span class="form-label"
+                        >Vehicle Registration Number</span
+                      >
+                      <input
+                        class="form-control"
+                        type="text"
+                        id="regNo"
+                        placeholder="KL-99-XX-1234"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <span class="form-label">Manufacturing Year</span>
+                      <input
+                        class="form-control"
+                        type="number"
+                        min="1980"
+                        max="2050"
+                        id="manYear"
+                        placeholder="Enter manufacturing year"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <span class="form-label">Model Number</span>
+                  <input
+                    class="form-control"
+                    type="tel"
+                    id="modelNo"
+                    placeholder="Enter model number"
+                  />
+                </div>
+                <div class="form-group">
+                  <span class="form-label">Vehicle Type</span>
+                  <select class="form-control" id="vType">
+                    <option>2 Wheeler</option>
+                    <option>4 Wheeler</option>
+                  </select>
+                </div>
+                <div class="offers">
+                  <div><h3>Select maximum 2 offers.</h3></div>
+                  <div class="">
+                    <input
+                      class="offerOption"
+                      type="checkbox"
+                      value="10"
+                      name="radiob"
+                      id="off10"
+                    />
+                    <label class="" for="">
+                      10 % discount for RTO's in Trivandrum, Ernakulam and
+                      Kozhikode districts.
+                    </label>
+                  </div>
+                  <div class="">
+                    <input
+                      class="offerOption"
+                      type="checkbox"
+                      name="radiob"
+                      value="20"
+                      id="off20for2"
+                    />
+                    <label class="" for="">
+                      20 % discounts for two wheeler models more than 10 years
+                      old.
+                    </label>
+                  </div>
+                  <div class="">
+                    <input
+                      class="offerOption"
+                      type="checkbox"
+                      name="radiob"
+                      value="20"
+                      id="off20for4"
+                    />
+                    <label class="" for="">
+                      20 % discounts for four wheeler models more than 15 years.
+                    </label>
+                  </div>
+                </div>
+                <div class="">
+                  <input
+                    class="offerOption"
+                    type="checkbox"
+                    name="radiob"
+                    value="5"
+                    id="off5"
+                  />
+                  <label class="" for=""> 5% festival discount </label>
+                </div>
+                <div class="offer-section">
+                  <button
+                    type="button"
+                    class="btn offer-btn btn-info"
+                    onclick="calcOffers()"
+                  >
+                    Check Offers
+                  </button>
+                  <span class="famountg">Final amount </span>
+                  <input
+                    class="famount"
+                    type="tel"
+                    placeholder="   Final Amount"
+                    disabled
+                    id="totala"
+                    value="1500"
+                  />
+                </div>
+
+                <div class="form-btn">
+                  <button class="submit-btn">Book Service Now</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
